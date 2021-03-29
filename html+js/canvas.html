@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="folha" width="600" height="500"></canvas>
+
+  <script>
+    var folhaDesenho = document.getElementById("folha");
+    var areaDesenho = folhaDesenho.getContext("2d");
+
+    areaDesenho.fillStyle = '#286047';
+    areaDesenho.fillRect(0, 0, 600, 500);
+
+    //Linha do meio do campo
+    areaDesenho.fillStyle = '#ffffff';
+    areaDesenho.fillRect(297.5, 0, 5, 500); //(posicção Y = metade do campo+espessura da linha, posição X, largura da linha, altura do campo)
+
+    //Raquete 1
+    areaDesenho.fillRect(0, 30, 5, 50);
+
+    //Raquete 2
+    areaDesenho.fillRect(595, 300, 5, 50);
+
+    //Bola "quadrada"
+    areaDesenho.fillRect(30, 30, 5, 5); 
+  </script>
+</body>
+
+</html>

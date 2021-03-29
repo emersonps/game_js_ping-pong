@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Primeiro Programa</title>
+
+</head>
+
+<body>
+  <h1 style="color:#ffe5e5">Titulo H1</h1>
+  <h2 style="color: #55fff5">Titulo H2</h2>
+
+  <label for="opcao">Nome</label>
+  <input type="text" id="opcao" onblur="capturar(this)"><br>
+
+  <label for="anoNascimento">Ano nascimento</label>
+  <input type="text" id="anoNascimento" onblur="calcIdade()"><br>
+  <label for="anoAtual">Ano atual</label>
+  <input type="text" id="anoAtual" value="2021">
+</body>
+
+<script>
+  var retorno;
+  retorno = confirm("Olá mundo! Tudo bem?");
+  if (retorno)
+    console.log("Acesso liberado!");
+  else
+    console.log("Acesso negado");
+
+  function capturar(input) {
+    var opcao = input.value;
+
+    if (opcao == "Evelyn")
+      console.log(opcao + " TE AMO");
+    else
+      console.log("Cai fora!");
+  }
+
+  function calcIdade() {
+    var anoNascimento = document.getElementById("anoNascimento");
+    var anoAtual = document.getElementById("anoAtual");
+
+    var result = anoAtual - anoNascimento;
+    console.log(anoAtual.value - anoNascimento.value);
+  }
+
+</script>
+
+</html>
